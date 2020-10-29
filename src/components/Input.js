@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, TextInput } from "react-native";
+import { View, StyleSheet, TextInput, Platform } from "react-native";
 
 const Input = (props) => {
     const { placeholder, onChangeText, value, password } = props;
@@ -24,10 +24,10 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         marginHorizontal: 20,
         marginVertical: 10,
-        padding: 10,
+        padding: Platform.OS === "android" ? 5 : 9,
         borderWidth: StyleSheet.hairlineWidth,
         borderRadius: 10,
         backgroundColor: 'white'
     },
-    input: { width: "100%", },
+    input: { width: "100%",  height: '100%', },
 });

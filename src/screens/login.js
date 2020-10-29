@@ -14,7 +14,6 @@ import Input from "../components/Input";
 import colors from "../colors";
 import Layout from "../components//Layout";
 import appContext from "../context";
-import Icon from 'react-native-vector-icons/AntDesign';
 
 const widthScreen = Dimensions.get("screen").width;
 const heightScreen = Dimensions.get("screen").height;
@@ -50,7 +49,6 @@ const Login = () => {
     return (
         <Layout>
             <View style={styles.container}>
-            <Icon name="rocket" size={30} color="#900" />
                 <View style={styles.gradient}>
                     <Text style={styles.title}>Siiau</Text>
                     <View style={styles.imageContainer}>
@@ -143,7 +141,7 @@ const styles = StyleSheet.create({
     image: {
         width: "100%",
         height: "100%",
-        tintColor: 'black'
+        tintColor: 'rgb(5, 51, 89)'
     },
     imageContainer: {
         flex: 1,
@@ -151,13 +149,13 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 40,
-        color: "white",
+        color: colors.primary,
         fontWeight: "bold",
         marginLeft: 20,
-        textShadowColor: "rgba(0,0,0, .75)",
+        textShadowColor: colors.secondary,
         textShadowOffset: {
-            width: 4,
-            height: 4,
+            width: 2,
+            height: 3,
         },
         textShadowRadius: 0,
     },
